@@ -1,0 +1,121 @@
+{
+    "comments": [
+        {
+            "guid": "cd1eb6e12269f2748a9e33d21c86ea89",
+            "title": "脚本文件",
+            "comment": "存放项目中的所有脚本文件，包括游戏逻辑、UI控制等",
+            "titleColor": {
+                "r": 0.4000000059604645,
+                "g": 0.800000011920929,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "createdTimeStamp": 1747990629284,
+            "modifiedTimeStamp": 1747995964270
+        },
+        {
+            "guid": "982c56ff1c3e5ee4e929da95ac7a14a8",
+            "title": "预制体",
+            "comment": "存放项目中的所有预制体资源",
+            "titleColor": {
+                "r": 0.4000000059604645,
+                "g": 1.0,
+                "b": 0.4000000059604645,
+                "a": 1.0
+            },
+            "createdTimeStamp": 1747990629338,
+            "modifiedTimeStamp": 1747995964304
+        },
+        {
+            "guid": "5e4d2a83075b26640869148ac5c56372",
+            "title": "模型资源",
+            "comment": "存放项目中的所有3D模型资源",
+            "titleColor": {
+                "r": 1.0,
+                "g": 0.4000000059604645,
+                "b": 0.4000000059604645,
+                "a": 1.0
+            },
+            "createdTimeStamp": 1747990629365,
+            "modifiedTimeStamp": 1747995964332
+        },
+        {
+            "guid": "9eedc91757e3b8146ab30c9312891f2f",
+            "title": "纹理资源",
+            "comment": "存放项目中的所有纹理和图片资源",
+            "titleColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 0.4000000059604645,
+                "a": 1.0
+            },
+            "createdTimeStamp": 1747990629393,
+            "modifiedTimeStamp": 1747995964359
+        },
+        {
+            "guid": "0427899b129f73540abdef2857260bed",
+            "title": "空文件夹",
+            "comment": "这是一个空文件夹，用于测试",
+            "titleColor": {
+                "r": 0.699999988079071,
+                "g": 0.699999988079071,
+                "b": 0.699999988079071,
+                "a": 1.0
+            },
+            "createdTimeStamp": 1747990629420,
+            "modifiedTimeStamp": 1747995964386
+        },
+        {
+            "guid": "0fb5aa08d20ae774685a7124bc6d9496",
+            "title": "美术资源",
+            "comment": "<color=#FF0000>存放项目中的所有美术相关资源</color>",
+            "titleColor": {
+                "r": 1.0,
+                "g": 0.6000000238418579,
+                "b": 0.800000011920929,
+                "a": 1.0
+            },
+            "createdTimeStamp": 1747990629447,
+            "modifiedTimeStamp": 1748417032734
+        },
+        {
+            "guid": "0557f53a87576cc4e814263b307ae35c",
+            "title": "嵌套文件夹",
+            "comment": "这是一个多层嵌套的文件夹，用于测试多层级目录",
+            "titleColor": {
+                "r": 0.5,
+                "g": 0.5,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "createdTimeStamp": 1747991242536,
+            "modifiedTimeStamp": 1747995964442
+        },
+        {
+            "guid": "5cb5ae6a0e48962439932722e719d7a2",
+            "title": "富文本",
+            "comment": "<color=#FF0000>这是红色文本</color>\n<b>这是粗体文本</b>\n<i>这是斜体文本</i>\n<size=14>这是大号文本</size><color=#FF0000>这是红色文本</color>\n<b>这是粗体文本</b>\n<i>这是斜体文本</i>\n<size=14>这是大号文本</size><color=#FF0000>这是红色文本</color>\n<b>这是粗体文本</b>\n<i>这是斜体文本</i>\n<size=14>这是大号文本</size>",
+            "titleColor": {
+                "r": 0.0,
+                "g": 0.9937106370925903,
+                "b": 0.33121973276138308,
+                "a": 1.0
+            },
+            "createdTimeStamp": 1747991242562,
+            "modifiedTimeStamp": 1749023819714
+        },
+        {
+            "guid": "05e5231bd32cc604ab7bfc32ffd773f3",
+            "title": "长注释",
+            "comment": "这是一个非常长的注释，用于测试注释的换行和显示效果。这是一个非常长的注释，用于测试注释的换行和显示效果。这是一个非常长的注释，用于测试注释的换行和显示效果。这是一个非常长的注释，用于测试注释的换行和显示效果。这是一个非常长的注释，用于测试注释的换行和显示效果。",
+            "titleColor": {
+                "r": 0.5,
+                "g": 0.5,
+                "b": 0.5,
+                "a": 1.0
+            },
+            "createdTimeStamp": 1747991242592,
+            "modifiedTimeStamp": 1747995964498
+        }
+    ]
+}

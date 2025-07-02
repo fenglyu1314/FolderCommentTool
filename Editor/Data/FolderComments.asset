@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d76a00429aa85c4fa5dad4ed02cbc81, type: 3}
+  m_Name: FolderComments
+  m_EditorClassIdentifier: 
+  comments:
+  - guid: cd1eb6e12269f2748a9e33d21c86ea89
+    title: "\u811A\u672C\u6587\u4EF6"
+    comment: "\u5B58\u653E\u9879\u76EE\u4E2D\u7684\u6240\u6709\u811A\u672C\u6587\u4EF6\uFF0C\u5305\u62EC\u6E38\u620F\u903B\u8F91\u3001UI\u63A7\u5236\u7B49"
+    titleColor: {r: 0.4, g: 0.8, b: 1, a: 1}
+    createdTimeStamp: 1747990629284
+    modifiedTimeStamp: 1747995964270
+  - guid: 982c56ff1c3e5ee4e929da95ac7a14a8
+    title: "\u9884\u5236\u4F53"
+    comment: "\u5B58\u653E\u9879\u76EE\u4E2D\u7684\u6240\u6709\u9884\u5236\u4F53\u8D44\u6E90"
+    titleColor: {r: 0.4, g: 1, b: 0.4, a: 1}
+    createdTimeStamp: 1747990629338
+    modifiedTimeStamp: 1747995964304
+  - guid: 5e4d2a83075b26640869148ac5c56372
+    title: "\u6A21\u578B\u8D44\u6E90"
+    comment: "\u5B58\u653E\u9879\u76EE\u4E2D\u7684\u6240\u67093D\u6A21\u578B\u8D44\u6E90"
+    titleColor: {r: 1, g: 0.4, b: 0.4, a: 1}
+    createdTimeStamp: 1747990629365
+    modifiedTimeStamp: 1747995964332
+  - guid: 9eedc91757e3b8146ab30c9312891f2f
+    title: "\u7EB9\u7406\u8D44\u6E90"
+    comment: "\u5B58\u653E\u9879\u76EE\u4E2D\u7684\u6240\u6709\u7EB9\u7406\u548C\u56FE\u7247\u8D44\u6E90"
+    titleColor: {r: 1, g: 1, b: 0.4, a: 1}
+    createdTimeStamp: 1747990629393
+    modifiedTimeStamp: 1747995964359
+  - guid: 0427899b129f73540abdef2857260bed
+    title: "\u7A7A\u6587\u4EF6\u5939"
+    comment: "\u8FD9\u662F\u4E00\u4E2A\u7A7A\u6587\u4EF6\u5939\uFF0C\u7528\u4E8E\u6D4B\u8BD5"
+    titleColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+    createdTimeStamp: 1747990629420
+    modifiedTimeStamp: 1747995964386
+  - guid: 0fb5aa08d20ae774685a7124bc6d9496
+    title: "\u7F8E\u672F\u8D44\u6E90"
+    comment: "\u5B58\u653E\u9879\u76EE\u4E2D\u7684\u6240\u6709\u7F8E\u672F\u76F8\u5173\u8D44\u6E90"
+    titleColor: {r: 1, g: 0.6, b: 0.8, a: 1}
+    createdTimeStamp: 1747990629447
+    modifiedTimeStamp: 1747995964414
+  - guid: 0557f53a87576cc4e814263b307ae35c
+    title: "\u5D4C\u5957\u6587\u4EF6\u5939"
+    comment: "\u8FD9\u662F\u4E00\u4E2A\u591A\u5C42\u5D4C\u5957\u7684\u6587\u4EF6\u5939\uFF0C\u7528\u4E8E\u6D4B\u8BD5\u591A\u5C42\u7EA7\u76EE\u5F55"
+    titleColor: {r: 0.5, g: 0.5, b: 1, a: 1}
+    createdTimeStamp: 1747991242536
+    modifiedTimeStamp: 1747995964442
+  - guid: 5cb5ae6a0e48962439932722e719d7a2
+    title: "\u5BCC\u6587\u672C"
+    comment: "<color=#FF0000>\u8FD9\u662F\u7EA2\u8272\u6587\u672C</color>\n<b>\u8FD9\u662F\u7C97\u4F53\u6587\u672C</b>\n<i>\u8FD9\u662F\u659C\u4F53\u6587\u672C</i>\n<size=14>\u8FD9\u662F\u5927\u53F7\u6587\u672C</size>"
+    titleColor: {r: 1, g: 0.5, b: 0.5, a: 1}
+    createdTimeStamp: 1747991242562
+    modifiedTimeStamp: 1747997183785
+  - guid: 05e5231bd32cc604ab7bfc32ffd773f3
+    title: "\u957F\u6CE8\u91CA"
+    comment: "\u8FD9\u662F\u4E00\u4E2A\u975E\u5E38\u957F\u7684\u6CE8\u91CA\uFF0C\u7528\u4E8E\u6D4B\u8BD5\u6CE8\u91CA\u7684\u6362\u884C\u548C\u663E\u793A\u6548\u679C\u3002\u8FD9\u662F\u4E00\u4E2A\u975E\u5E38\u957F\u7684\u6CE8\u91CA\uFF0C\u7528\u4E8E\u6D4B\u8BD5\u6CE8\u91CA\u7684\u6362\u884C\u548C\u663E\u793A\u6548\u679C\u3002\u8FD9\u662F\u4E00\u4E2A\u975E\u5E38\u957F\u7684\u6CE8\u91CA\uFF0C\u7528\u4E8E\u6D4B\u8BD5\u6CE8\u91CA\u7684\u6362\u884C\u548C\u663E\u793A\u6548\u679C\u3002\u8FD9\u662F\u4E00\u4E2A\u975E\u5E38\u957F\u7684\u6CE8\u91CA\uFF0C\u7528\u4E8E\u6D4B\u8BD5\u6CE8\u91CA\u7684\u6362\u884C\u548C\u663E\u793A\u6548\u679C\u3002\u8FD9\u662F\u4E00\u4E2A\u975E\u5E38\u957F\u7684\u6CE8\u91CA\uFF0C\u7528\u4E8E\u6D4B\u8BD5\u6CE8\u91CA\u7684\u6362\u884C\u548C\u663E\u793A\u6548\u679C\u3002"
+    titleColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    createdTimeStamp: 1747991242592
+    modifiedTimeStamp: 1747995964498

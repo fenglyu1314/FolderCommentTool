@@ -1,0 +1,23 @@
+{
+  "name": "com.ta.foldercommenttool",
+  "version": "1.2.2",
+  "displayName": "Folder Comment Tool",
+  "description": "A Unity editor extension that allows you to add comments to folders in the Project window.",
+  "unity": "2022.3",
+  "documentationUrl": "https://github.com/fenglyu1314/FolderCommentTool/blob/upm/README.md",
+  "changelogUrl": "https://github.com/fenglyu1314/FolderCommentTool/blob/upm/CHANGELOG.md",
+  "licensesUrl": "https://github.com/fenglyu1314/FolderCommentTool/blob/upm/LICENSE.md",
+  "keywords": [
+    "editor",
+    "extension",
+    "folder",
+    "comment",
+    "organization"
+  ],
+  "author": {
+    "name": "喵喵Mya",
+    "email": "fenglyu@foxmail.com"
+  },
+  "dependencies": {
+  }
+}

@@ -101,10 +101,15 @@ echo.
 echo [5/6] 创建版本标签...
 echo 🏷️  正在创建标签 %ToolVersion%...
 
-REM 确保在UPM分支上创建标签
-git checkout %ToolName%
-git tag %ToolVersion%
+REM 删除现有标签（如果存在）
+git tag -d %ToolVersion% >nul 2>&1
+git push origin :refs/tags/%ToolVersion% >nul 2>&1
 
+REM 获取UPM分支的最新提交ID
+for /f %%i in ('git rev-parse %ToolName%') do set UMP_COMMIT=%%i
+
+REM 在UPM分支的提交上创建标签（不需要切换分支）
+git tag %ToolVersion% %UMP_COMMIT%
 if !errorlevel! neq 0 (
     echo ❌ 错误: 创建标签失败
     pause

@@ -53,7 +53,7 @@ echo ✅ 检测到版本: %ToolVersion%
 
 echo.
 echo [3/6] 检查版本标签...
-git tag -l | findstr /x "%ToolVersion%" >nul 2>&1
+git tag -l %ToolVersion% | findstr "^%ToolVersion%$" >nul 2>&1
 set tag_exists=!errorlevel!
 if !tag_exists! equ 0 (
     echo ⚠️  警告: 标签 %ToolVersion% 已存在
@@ -89,12 +89,10 @@ echo ✅ UPM分支创建成功
 
 echo.
 echo [5/6] 创建版本标签...
-echo 🏷️  正在创建标签 %ToolVersion%...
 
-REM 检查标签是否已存在
-git tag -l %ToolVersion% | findstr "^%ToolVersion%$" >nul 2>&1
-if !errorlevel! equ 0 (
-    echo ⚠️  警告: 标签 %ToolVersion% 已存在
+REM 使用第3步检查的结果
+if !tag_exists! equ 0 (
+    echo ⚠️  标签 %ToolVersion% 已存在
     echo.
     echo 选项:
     echo [1] 覆盖现有标签
@@ -114,6 +112,8 @@ if !errorlevel! equ 0 (
         exit /b 1
     )
 )
+
+echo 🏷️  正在创建标签 %ToolVersion%...
 
 REM 获取UPM分支的最新提交ID
 for /f %%i in ('git rev-parse %ToolName%') do set UMP_COMMIT=%%i

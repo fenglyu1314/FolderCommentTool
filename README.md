@@ -98,7 +98,7 @@ FolderCommentTool是一个Unity编辑器扩展，允许开发者为项目中的�
 
 本工程是FolderCommentTool插件的完整开发环境，包含：
 
-- **插件源码**：位于 `Assets/FolderCommentTool/` 目录，这是实际的UPM包内容
+- **插件源码**：位于 `Packages/FolderCommentTool/` 目录，这是实际的UPM包内容
 - **开发环境**：完整的Unity工程，用于插件开发和测试
 - **测试工具**：内置的测试用例和测试辅助工具
 - **文档系统**：完整的开发文档和使用说明
@@ -174,6 +174,25 @@ FolderCommentTool/
 
 ## 📋 版本历史
 
+### v1.3.0 (2025-01-23)
+- 📦 **版本升级**：升级到v1.3.0版本
+- 🔧 **功能完善**：持续优化和改进
+
+### v1.2.2 (2025-01-23)
+- 📦 **版本管理**：升级版本号至1.2.2
+- 🔗 **文档链接**：更新package.json中的文档链接指向新版本
+
+### v1.2.1 (2025-01-23)
+- 🔧 **发布工具重构**：重构fct-release.bat发布脚本，提高可维护性
+- ⚡ **辅助函数**：新增CheckCommand、DeleteBranchIfExists、PushToRemote辅助函数
+- 🎯 **逻辑改进**：改进分支检查逻辑，使用git show-ref替代findstr模式匹配
+- 🔗 **配置优化**：新增RepoUrl配置变量，集中管理仓库地址
+
+### v1.2.0 (2025-01-23)
+- 🏗️ **架构重构**：将插件目录从Assets/FolderCommentTool迁移到Packages/FolderCommentTool
+- 📦 **标准化**：采用Unity Package Manager标准目录结构
+- 🚀 **发布优化**：更新一键发布脚本，适配新的插件目录结构
+
 ### v1.1.0 (2025-01-23)
 - 📚 **文档优化**：大幅简化使用文档，专注于普通用户需求
 - 🎯 **用户体验**：移除开发相关内容，提高文档实用性
@@ -204,7 +223,7 @@ FolderCommentTool/
 - 🎨 富文本支持和自定义样式
 - 🔧 完整的测试工具
 
-[查看完整版本历史](Assets/FolderCommentTool/CHANGELOG.md)
+[查看完整版本历史](Packages/FolderCommentTool/CHANGELOG.md)
 
 ## 🤝 贡献指南
 
@@ -236,6 +255,6 @@ FolderCommentTool/
 
 ---
 
-*最后更新: 2025-01-23 - v1.1.0 文档优化与用户体验提升*
+*最后更新: 2025-01-23 - v1.3.0 版本升级与路径修正*
 
 

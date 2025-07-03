@@ -73,47 +73,29 @@ if !tag_exists! equ 0 (
 )
 
 echo.
-echo [4/6] 更新UPM分支...
+echo [4/6] 创建UPM分支...
 
-REM 检查UPM分支是否存在
-git show-ref --verify --quiet refs/heads/%ToolName%
+REM 删除现有的UPM分支（如果存在）
+call :DeleteBranchIfExists %ToolName%
+
+REM 删除远程UPM分支（如果存在）
+git ls-remote --heads origin %ToolName% | findstr %ToolName% >nul 2>&1
 if !errorlevel! equ 0 (
-    echo 🔄 正在更新现有的 %ToolName% 分支...
-    git checkout %ToolName%
-    if !errorlevel! neq 0 (
-        echo ❌ 错误: 无法切换到 %ToolName% 分支
-        pause
-        exit /b 1
-    )
-
-    REM 从main分支合并最新的插件目录内容
-    git checkout main -- %ToolAssetPath%
-    if !errorlevel! neq 0 (
-        echo ❌ 错误: 无法从main分支复制插件文件
-        pause
-        exit /b 1
-    )
-
-    REM 移动文件到根目录
-    xcopy "%ToolAssetPathWin%\*" "." /E /Y /Q >nul 2>&1
-    rmdir /S /Q "%ToolAssetPathWin%" >nul 2>&1
-
-    REM 提交更改
-    git add .
-    git commit -m "Update to version %ToolVersion%"
-    echo ✅ UPM分支更新成功
-) else (
-    echo 🔄 正在分离插件目录到 %ToolName% 分支...
-    git subtree split -P %ToolAssetPath% -b %ToolName%
-
-    if !errorlevel! neq 0 (
-        echo ❌ 错误: 创建分支失败
-        echo 请检查路径是否正确: %ToolAssetPath%
-        pause
-        exit /b 1
-    )
-    echo ✅ UPM分支创建成功
+    echo 🗑️  删除远程 %ToolName% 分支...
+    git push origin --delete %ToolName% >nul 2>&1
+    echo ✅ 远程分支已删除
 )
+
+echo 🔄 正在使用git subtree split创建 %ToolName% 分支...
+git subtree split -P %ToolAssetPath% -b %ToolName%
+
+if !errorlevel! neq 0 (
+    echo ❌ 错误: 创建分支失败
+    echo 请检查路径是否正确: %ToolAssetPath%
+    pause
+    exit /b 1
+)
+echo ✅ UPM分支创建成功
 
 echo.
 echo [5/6] 创建版本标签...

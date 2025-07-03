@@ -230,9 +230,7 @@ FolderCommentTool/
 
 ## 📄 许可证
 
-本项目采用专有软件许可协议，需要获得明确授权才可使用。
-
-**重要提示**: 本软件受版权保护，未经授权禁止使用、复制、修改或分发。如需使用请联系授权。
+本项目采用 MIT 许可证，您可以自由使用、修改和分发。
 
 详情请参阅 [LICENSE.md](Packages/FolderCommentTool/LICENSE.md) 文件。
 

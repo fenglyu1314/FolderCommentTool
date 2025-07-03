@@ -25,10 +25,26 @@ REM ===== 环境检查 =====
 echo [1/6] 检查环境和文件...
 
 REM 检查Git是否可用
-call :CheckCommand "git --version" "Git 未安装或不在PATH中" "请安装Git并确保可以在命令行中使用"
+echo 🔍 检查Git环境...
+git --version >nul 2>&1
+if !errorlevel! neq 0 (
+    echo ❌ 错误: Git 未安装或不在PATH中
+    echo 请安装Git并确保可以在命令行中使用
+    pause
+    exit /b 1
+)
+echo ✅ Git环境正常
 
-REM 检查是否在Git仓库中
-call :CheckCommand "git rev-parse --git-dir" "当前目录不是Git仓库" "请在Git仓库根目录下运行此脚本"
+REM 检查是否在Git仓库中 
+echo 检查Git仓库状态...
+git rev-parse --git-dir >nul 2>&1
+if !errorlevel! neq 0 (
+    echo ❌ 错误: 当前目录不是Git仓库
+    echo 请在Git仓库根目录下运行此脚本
+    pause
+    exit /b 1
+)
+echo ✅ Git仓库检查通过
 
 REM 检查package.json文件
 echo 📁 检查文件: %ToolAssetPathWin%\package.json
@@ -53,11 +69,29 @@ echo ✅ 检测到版本: %ToolVersion%
 
 echo.
 echo [3/6] 检查版本标签...
-git tag -l %ToolVersion% | findstr "^%ToolVersion%$" >nul 2>&1
+git show-ref --tags --quiet refs/tags/%ToolVersion%
 set tag_exists=!errorlevel!
 if !tag_exists! equ 0 (
     echo ⚠️  警告: 标签 %ToolVersion% 已存在
-    echo 💡 提示: 稍后将询问是否覆盖现有标签
+    echo.
+    echo 选项:
+    echo [1] 覆盖现有标签
+    echo [2] 取消发布
+    echo.
+    set /p choice="请选择 (1/2): "
+
+    if "!choice!"=="1" (
+        echo 🗑️  删除现有标签...
+        git tag -d %ToolVersion% >nul 2>&1
+        git push origin :refs/tags/%ToolVersion% >nul 2>&1
+        echo ✅ 现有标签已删除
+        set tag_exists=1
+    ) else (
+        echo ❌ 发布已取消
+        echo 💡 提示: 请更新 package.json 中的版本号后重试
+        pause
+        exit /b 1
+    )
 ) else (
     echo ✅ 版本标签不存在，可以创建新标签
 )
@@ -89,30 +123,6 @@ echo ✅ UPM分支创建成功
 
 echo.
 echo [5/6] 创建版本标签...
-
-REM 使用第3步检查的结果
-if !tag_exists! equ 0 (
-    echo ⚠️  标签 %ToolVersion% 已存在
-    echo.
-    echo 选项:
-    echo [1] 覆盖现有标签
-    echo [2] 取消发布
-    echo.
-    set /p choice="请选择 (1/2): "
-
-    if "!choice!"=="1" (
-        echo 🗑️  删除现有标签...
-        git tag -d %ToolVersion% >nul 2>&1
-        git push origin :refs/tags/%ToolVersion% >nul 2>&1
-        echo ✅ 现有标签已删除
-    ) else (
-        echo ❌ 发布已取消
-        echo 💡 提示: 请更新 package.json 中的版本号后重试
-        pause
-        exit /b 1
-    )
-)
-
 echo 🏷️  正在创建标签 %ToolVersion%...
 
 REM 获取UPM分支的最新提交ID
